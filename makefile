@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS=-g -Wall 
 IDIR   = -I/usr/common/software/gsl/2.1/gnu/include  -I/opt/local/include  
-LDIR   = -L/usr/common/software/gsl/2.1/gnu/lib      -L/opt/local/lib
+LDIR   = -L/usr/common/software/gsl/2.1/gnu/lib      -L/usr/local/lib
 
 cl:  cl_theory.o functions.o run_camb_get_Tk.o  spline_functions.o get_sn_cov.o
 	$(CC) $(CFLAGS) -o  cl cl_theory.o functions.o run_camb_get_Tk.o spline_functions.o get_sn_cov.o $(LDIR) -lgsl -lgslcblas -lrecipes -lm
