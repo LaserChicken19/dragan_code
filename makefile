@@ -1,7 +1,19 @@
 CC = gcc
+<<<<<<< HEAD
 CFLAGS=-g -Wall -fopenmp
 IDIR   = -I/usr/common/software/gsl/2.1/gnu/include  -I ~/dragan_code/recipes/lib  
 LDIR   = -L/usr/common/software/gsl/2.1/gnu/lib      -L ~/dragan_code/recipes/lib
+=======
+<<<<<<< HEAD
+CFLAGS=-g -Wall -fopenmp
+IDIR   = -I/usr/common/software/gsl/2.1/gnu/include  -I/opt/local/include  
+LDIR   = -L/usr/common/software/gsl/2.1/gnu/lib      -L/opt/local/lib
+=======
+CFLAGS=-g -Wall 
+IDIR   = -I/usr/common/software/gsl/2.1/gnu/include  -I/opt/local/include  
+LDIR   = -L/usr/common/software/gsl/2.1/gnu/lib      -L/usr/local/lib
+>>>>>>> d2b7016c317fc75b52e1d581a4dafc3634817934
+>>>>>>> 79983bcbd60d09389115122aacd52c84dab6b1d8
 
 cl:  cl_theory.o functions.o run_camb_get_Tk.o  spline_functions.o get_sn_cov.o
 	$(CC) $(CFLAGS) -o  cl cl_theory.o functions.o run_camb_get_Tk.o spline_functions.o get_sn_cov.o $(LDIR) -lgsl -lgslcblas -lrecipes -lm
